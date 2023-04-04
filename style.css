@@ -32,7 +32,13 @@ h1 {
 }
 
 .label:hover .tooltip {
-    display: block;
+  visibility: visible;
+  opacity: 1;
+  left: calc(100% + 1em);
+}
+
+.label:hover .tooltip::after {
+  left: -1em;
 }
 
 .na-btn {
@@ -59,35 +65,46 @@ p {
 }
 
 .slider {
-    width: 200px;
-    margin: 1rem;
-    text-align: center;
-    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1em 0;
+    width: 80%;
+    position: relative
 }
 
 .slider-container {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    margin: 2rem 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .tooltip {
-    display: none;
     position: absolute;
     z-index: 1;
-    padding: 0.5rem;
-    border-radius: 4px;
-    font-size: 0.8rem;
     background-color: #333;
     color: #fff;
-    width: 200px;
-    left: 100%;
-    top: 0;
-    margin-left: 10px;
-    transform: translateX(-50%);
-    text-align: center;
+    padding: 0.5em;
+    border-radius: 0.25em;
+    white-space: nowrap;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s ease;
 }
+
+.tooltip::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    margin-top: -0.5em;
+    border-width: 0.5em;
+    border-style: solid;
+    border-color: transparent #333 transparent transparent;
+}
+
 
 .range {
     width: 100%;
