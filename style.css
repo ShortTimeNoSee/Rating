@@ -32,7 +32,13 @@ h1 {
 }
 
 .label:hover .tooltip {
-    display: block;
+  visibility: visible;
+  opacity: 1;
+  transition: visibility 0s, opacity 0.5s;
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .na-btn {
@@ -59,31 +65,47 @@ p {
 }
 
 .slider {
-    width: 200px;
-    margin: 1rem;
-    text-align: center;
+  margin: 20px;
+  text-align: center;
+}
+
+.slider input {
+  width: 200px;
+  height: 20px;
+  margin-top: 10px;
 }
 
 .slider-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    margin: 2rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .tooltip {
-    display: none;
-    position: absolute;
-    z-index: 1;
-    padding: 0.5rem;
-    border-radius: 4px;
-    font-size: 0.8rem;
-    background-color: #333;
-    color: #fff;
-    width: 200px;
-    left: 50%;
-    transform: translateX(-50%);
-    text-align: center;
+  position: absolute;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 1.2;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.5s;
+}
+
+.tooltip::after {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  right: 100%;
+  margin-top: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent rgba(0, 0, 0, 0.8) transparent transparent;
 }
 
 .range {
