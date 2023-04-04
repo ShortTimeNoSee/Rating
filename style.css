@@ -22,7 +22,7 @@ h1 {
     background-color: #ccc;
 }
 
-.na-btn.clicked {
+.na-btn.selected {
     background-color: #f66;
     color: #fff;
     border: 1px solid #f00;
