@@ -27,7 +27,7 @@ p {
 
 .label {
   display: block;
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: bold;
   margin-bottom: 0.5rem;
 }
@@ -58,6 +58,6 @@ p {
 }
 
 #rating {
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: bold;
 }
