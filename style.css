@@ -99,3 +99,35 @@ p {
     font-size: 1.2rem;
     font-weight: bold;
 }
+
+
+
+
+
+.label {
+    position: relative;
+}
+
+.tooltip {
+    position: absolute;
+    bottom: -25px;
+    left: 0;
+    width: 150px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 12px;
+}
+
+.tooltip::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #333 transparent transparent transparent;
+}
