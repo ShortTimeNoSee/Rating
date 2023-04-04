@@ -4,19 +4,27 @@ const ratingSpan = document.getElementById("rating");
 
 calculateBtn.addEventListener("click", () => {
 	let total = 0;
+	let count = 0; // tracks the number of non-"N/A" sliders
 	sliders.forEach((slider) => {
 		const value = parseFloat(slider.querySelector(".value").textContent);
-		total += value;
+		if (!slider.querySelector(".na-btn").classList.contains("selected")) {
+			total += value;
+			count++;
+		}
 	});
-	const rating = (total / sliders.length).toFixed(1);
+	const rating = (count > 0 ? (total / count).toFixed(1) : "-");
 	ratingSpan.textContent = rating;
 });
 
 sliders.forEach((slider) => {
-	const range = slider.querySelector(".range");
-	const value = slider.querySelector(".value");
-	value.textContent = range.value;
-	range.addEventListener("input", () => {
-		value.textContent = range.value;
-	});
+    const range = slider.querySelector(".range");
+    const value = slider.querySelector(".value");
+    const naBtn = slider.querySelector(".na-btn"); // add this line
+    value.textContent = range.value;
+    range.addEventListener("input", () => {
+        value.textContent = range.value;
+    });
+    naBtn.addEventListener("click", () => { // add this block
+        naBtn.classList.toggle("selected");
+    });
 });
