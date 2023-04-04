@@ -25,6 +25,7 @@ h1 {
 }
 
 .label {
+    position: relative;
     display: block;
     font-size: 1rem;
     font-weight: bold;
@@ -75,15 +76,17 @@ p {
     display: none;
     position: absolute;
     z-index: 1;
-    padding: 0.5rem;
-    border-radius: 4px;
-    font-size: 0.8rem;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 12px;
     background-color: #333;
     color: #fff;
-    width: 200px;
+    width: 150px;
     left: 50%;
     transform: translateX(-50%);
     text-align: center;
+    top: -30px;
+    left: 50%;
 }
 
 .range {
@@ -98,37 +101,4 @@ p {
 .value {
     font-size: 1.2rem;
     font-weight: bold;
-}
-
-
-
-
-
-.label {
-    position: relative;
-}
-
-.tooltip {
-    position: absolute;
-    top: -30px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 150px;
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 5px;
-    border-radius: 5px;
-    font-size: 12px;
-}
-
-.tooltip::after {
-    content: "";
-    position: absolute;
-    bottom: 100%;
-    left: 50%;
-    transform: translateX(-50%);
-    border-width: 5px;
-    border-style: solid;
-    border-color: transparent transparent #333 transparent;
 }
