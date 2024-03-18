@@ -34,7 +34,6 @@ function drawUnitCircle(rating) {
 
     unitCircleContainer.innerHTML = "";
     unitCircleContainer.appendChild(svg);
-}Container.appendChild(svg);
 }
 
 calculateBtn.addEventListener("click", () => {
@@ -63,18 +62,4 @@ sliders.forEach((slider) => {
     naBtn.addEventListener("click", () => {
         naBtn.classList.toggle("selected");
     });
-});
-
-calculateBtn.addEventListener("click", () => {
-    let total = 0;
-    let count = 0;
-    sliders.forEach((slider) => {
-        const value = parseFloat(slider.querySelector(".value").textContent.replace("π", ""));
-        if (!slider.querySelector(".na-btn").classList.contains("selected")) {
-            total += value;
-            count++;
-        }
-    });
-    const rating = (count > 0 ? (total / count).toFixed(2) : "-");
-    ratingSpan.textContent = rating + "π"; // Display the rating with 'π' symbol
 });
