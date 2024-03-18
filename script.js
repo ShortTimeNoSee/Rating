@@ -8,7 +8,7 @@ function drawUnitCircle(rating) {
     const radius = svgSize / 2;
     const centerX = radius;
     const centerY = radius;
-    const angle = (rating - 2) * Math.PI;
+    const angle = -(rating - 2) * Math.PI;
     const pointX = centerX + radius * Math.cos(angle);
     const pointY = centerY + radius * Math.sin(angle);
 
