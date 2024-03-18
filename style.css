@@ -102,3 +102,9 @@ p {
     font-size: 1.2rem;
     font-weight: bold;
 }
+
+#unit-circle-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
