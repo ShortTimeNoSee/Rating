@@ -4,13 +4,13 @@ const ratingSpan = document.getElementById("rating");
 const unitCircleContainer = document.getElementById("unit-circle-container");
 
 function drawUnitCircle(rating) {
-    const svgSize = 200;
-    const radius = svgSize / 2;
-    const centerX = radius;
-    const centerY = radius;
+    const svgSize = 210;
+    const circleRadius = svgSize / 2 - 5; // Calculate the circle radius
+    const centerX = svgSize / 2;
+    const centerY = svgSize / 2;
     const angle = -(rating - 2) * Math.PI;
-    const pointX = centerX + radius * Math.cos(angle);
-    const pointY = centerY + radius * Math.sin(angle);
+    const pointX = centerX + circleRadius * Math.cos(angle); // Use circleRadius for dot position
+    const pointY = centerY + circleRadius * Math.sin(angle); // Use circleRadius for dot position
 
     const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
     svg.setAttribute("width", svgSize);
@@ -19,8 +19,9 @@ function drawUnitCircle(rating) {
     const circle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
     circle.setAttribute("cx", centerX);
     circle.setAttribute("cy", centerY);
-    circle.setAttribute("r", radius);
+    circle.setAttribute("r", circleRadius);
     circle.setAttribute("stroke", "black");
+    circle.setAttribute("stroke-width", 2);
     circle.setAttribute("fill", "none");
 
     const point = document.createElementNS("http://www.w3.org/2000/svg", "circle");
