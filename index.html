@@ -1,162 +1,65 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <title>Rating Calculator</title>
-    <link rel="stylesheet" type="text/css" href="style.css" />
-  </head>
-  <body>
-    <h1>Rating Calculator</h1>
-    <p>Drag the slider to select a value for each scale:</p>
-    <div class="slider-container">
-      <div class="slider">
-        <span id="physique-label" class="label"
-          >Physique<span class="tooltip"
-            >Physical appearance and build.</span
-          ></span
-        >
-        <input
-          type="range"
-          min="0"
-          max="10"
-          step="0.5"
-          value="5"
-          class="range"
-          aria-labelledby="physique-label"
-        />
-        <span class="value">5</span>
-        <button class="na-btn">N/A</button>
-      </div>
-      <div class="slider">
-        <span id="complexion-label" class="label"
-          >Complexion<span class="tooltip"
-            >Skin tone and clarity and facial features.</span
-          ></span
-        >
-        <input
-          type="range"
-          min="0"
-          max="10"
-          step="0.5"
-          value="5"
-          class="range"
-          aria-labelledby="complexion-label"
-        />
-        <span class="value">5</span>
-        <button class="na-btn">N/A</button>
-      </div>
-      <div class="slider">
-        <span id="fashion-label" class="label"
-          >Fashion<span class="tooltip"
-            >Style, clothing, and grooming.</span
-          ></span
-        >
-        <input
-          type="range"
-          min="0"
-          max="10"
-          step="0.5"
-          value="5"
-          class="range"
-          aria-labelledby="fashion-label"
-        />
-        <span class="value">5</span>
-        <button class="na-btn">N/A</button>
-      </div>
-      <div class="slider">
-        <span id="personality-label" class="label"
-          >Personality<span class="tooltip"
-            >Behavior, attitude, and social skills.</span
-          ></span
-        >
-        <input
-          type="range"
-          min="0"
-          max="10"
-          step="0.5"
-          value="5"
-          class="range"
-          aria-labelledby="personality-label"
-        />
-        <span class="value">5</span>
-        <button class="na-btn">N/A</button>
-      </div>
-      <div class="slider">
-        <span id="cognitive-intelligence-label" class="label"
-          >Cognitive Intelligence<span class="tooltip"
-            >Intellectual and problem-solving ability.</span
-          ></span
-        >
-        <input
-          type="range"
-          min="0"
-          max="10"
-          step="0.5"
-          value="5"
-          class="range"
-          aria-labelledby="cognitive-intelligence-label"
-        />
-        <span class="value">5</span>
-        <button class="na-btn">N/A</button>
-      </div>
-      <div class="slider">
-        <span id="emotional-intelligence-label" class="label"
-          >Emotional Intelligence<span class="tooltip"
-            >Empathy and emotional regulation.</span
-          ></span
-        >
-        <input
-          type="range"
-          min="0"
-          max="10"
-          step="0.5"
-          value="5"
-          class="range"
-          aria-labelledby="emotional-intelligence-label"
-        />
-        <span class="value">5</span>
-        <button class="na-btn">N/A</button>
-      </div>
-      <div class="slider">
-        <span id="body-language-label" class="label"
-          >Body Language<span class="tooltip"
-            >Posture, gestures, eye contact, etc.</span
-          ></span
-        >
-        <input
-          type="range"
-          min="0"
-          max="10"
-          step="0.5"
-          value="5"
-          class="range"
-          aria-labelledby="body-language-label"
-        />
-        <span class="value">5</span>
-        <button class="na-btn">N/A</button>
-      </div>
-      <div class="slider">
-        <span id="potential-label" class="label"
-          >Potential<span class="tooltip"
-            >Capability to rise in their ratings for the other scales.</span
-          ></span
-        >
-        <input
-          type="range"
-          min="0"
-          max="10"
-          step="0.5"
-          value="5"
-          class="range"
-          aria-labelledby="potential-label"
-        />
-        <span class="value">5</span>
-        <button class="na-btn">N/A</button>
-      </div>
-    </div>
-    <button id="calculate-btn">Calculate Rating</button>
-    <button id="reset-btn">Reset</button>
-    <p>Cumulative rating: <span id="rating">-</span>/10</p>
-    <script src="script.js"></script>
-  </body>
+	<head>
+		<meta charset="UTF-8">
+		<title>Rating Calculator</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+	</head>
+	<body>
+		<h1>Rating Calculator</h1>
+		<p>Drag the slider to select a value for each scale:</p>
+		<div class="slider-container">
+			<div class="slider">
+				<span class="label">Physique<span class="tooltip">Physical appearance and build.</span></span>
+				<input type="range" min="0" max="10" step="0.5" value="5" class="range">
+				<span class="value">5</span>
+				<button class="na-btn">N/A</button>
+			</div>
+			<div class="slider">
+				<span class="label">Complexion<span class="tooltip">Skin tone and clarity and facial features.</span></span>
+				<input type="range" min="0" max="10" step="0.5" value="5" class="range">
+				<span class="value">5</span>
+				<button class="na-btn">N/A</button>
+			</div>
+			<div class="slider">
+				<span class="label">Fashion<span class="tooltip">Style, clothing, and grooming.</span></span>
+				<input type="range" min="0" max="10" step="0.5" value="5" class="range">
+				<span class="value">5</span>
+				<button class="na-btn">N/A</button>
+			</div>
+			<div class="slider">
+				<span class="label">Personality<span class="tooltip">Behavior, attitude, and social skills.</span></span>
+				<input type="range" min="0" max="10" step="0.5" value="5" class="range">
+				<span class="value">5</span>
+				<button class="na-btn">N/A</button>
+			</div>
+			<div class="slider">
+				<span class="label">Cognitive Intelligence<span class="tooltip">Intellectual and problem-solving ability.</span></span>
+				<input type="range" min="0" max="10" step="0.5" value="5" class="range">
+				<span class="value">5</span>
+				<button class="na-btn">N/A</button>
+			</div>
+			<div class="slider">
+				<span class="label">Emotional Intelligence<span class="tooltip">Empathy and emotional regulation.</span></span>
+				<input type="range" min="0" max="10" step="0.5" value="5" class="range">
+				<span class="value">5</span>
+				<button class="na-btn">N/A</button>
+			</div>
+			<div class="slider">
+				<span class="label">Body Language<span class="tooltip">Posture, gestures, eye contact, etc.</span></span>
+				<input type="range" min="0" max="10" step="0.5" value="5" class="range">
+				<span class="value">5</span>
+				<button class="na-btn">N/A</button>
+			</div>
+			<div class="slider">
+				<span class="label">Potential<span class="tooltip">Capability to rise in their ratings for the other scales.</span></span>
+				<input type="range" min="0" max="10" step="0.5" value="5" class="range">
+				<span class="value">5</span>
+				<button class="na-btn">N/A</button>
+			</div>
+		</div>
+		<button id="calculate-btn">Calculate Rating</button>
+		<p>Cumulative rating: <span id="rating">-</span>/10 </p>
+		<script src="script.js"></script>
+	</body>
 </html>
